@@ -1,0 +1,317 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #0056b3;
+  --accent-color: #ff7f50;
+  --background-color: #ffffff;
+  --text-color: #333333;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  text-align: center;
+}
+
+header {
+  background-color: var(--primary-color);
+  width: 100%;
+  padding: 1rem 0;
+  transition: background-color 0.3s ease;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #000000;
+}
+
+#intro-header {
+  width: 1000px;
+  margin-bottom: 2rem;
+}
+
+#intro-header img {
+  width: 100%;
+  display: block;
+}
+
+#about-me {
+  width: 1000px;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.profile-pic {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid var(--accent-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bio {
+  text-align: left;
+}
+
+.main-content {
+  display: flex;
+  width: 1000px;
+  gap: 2rem;
+}
+
+section {
+  flex: 1;
+  padding: 2rem;
+  border: 1px solid var(--primary-color);
+  color: var(--text-color);
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+#experience ul,
+#skills ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  background-color: var(--primary-color);
+  color: white;
+  margin-top: 2rem;
+  transition: background-color 0.3s ease;
+}
+
+.social-links a {
+  margin: 0 10px;
+}
+
+.social-links img {
+  width: 32px;
+  transition: transform 0.2s ease;
+}
+
+.social-links img:hover {
+  transform: scale(1.1);
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 20px;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+
+.about-profile-pic {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  border: 5px solid var(--accent-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-bio {
+  flex: 1;
+  margin: 0 1rem;
+  text-align: left;
+}
+
+.about-bio h2 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.contact {
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.contact-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.contact-option img {
+  width: 30px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+form div {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dddddd;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.projects-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 20px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.project h3 {
+  margin-top: 0;
+}
+
+.project p {
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  body {
+    text-align: left;
+  }
+
+  #intro-header,
+  #about-me,
+  .main-content {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #about-me {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 1rem;
+  }
+
+  .main-content {
+    flex-direction: column;
+  }
+
+  section {
+    width: 100%;
+  }
+
+  nav a {
+    margin: 0.5rem 0;
+    display: block;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-bio {
+    margin-top: 1rem;
+  }
+
+  .contact-options {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .contact-option img {
+    width: 25px;
+  }
+
+  form {
+    max-width: 90%;
+  }
+}
